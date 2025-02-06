@@ -217,8 +217,40 @@ body{
     flex: 0.6;
     font-weight: 430;
 }
-.invert{
-    filter: invert(1);
+
+.slidableBtnContainer{
+    height: 3.5rem;
+    display: flex;
+    flex-direction: column;
+    border-radius: 10px;
+    background-color: #222;
+    margin: 0.5rem 2rem 0rem 2rem ;
+}
+.slidableBtns{
+    flex: 3;
+    display: flex;
+    flex-direction: row;
+    gap: 1.5rem;
+    padding: 0.5rem 0.5rem  0.5rem 0.5rem  ;
+}
+.playedSongName{
+    flex: 5;
+}
+.previousSong{
+    flex: 0.3;
+}
+.mainPlayBtn{
+    flex: 0.3;
+}
+.nextSong{
+    flex:0.3;
+}
+.timer{
+    flex: 5;
+}
+
+.sliderBtn{
+    flex: 0.5;
 }
 
 
@@ -311,4 +343,8 @@ body{
     background: #333;
     border-radius: 5px;
   }
+
+.invert{
+    filter: invert(1);
+}
 
