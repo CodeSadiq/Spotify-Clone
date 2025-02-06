@@ -3,12 +3,16 @@
 * { 
     margin: 0px;
     padding: 0px;
-    background-color: white;
     box-sizing: border-box;
     font-family: "Roboto", sans-serif;
-    color: black;
+    font-weight: 550;
+    color: white;
+}
+body{
+    background-color: black;
 }
 .bodyContainer{
+    background-color: black;
     display: flex;
     flex-direction: row;
     height: 100vh;
@@ -17,39 +21,294 @@
     flex: 1;
     display: flex;
     flex-direction: column;
-    padding: 1rem;
-
+    padding: 1rem 1rem 1.5rem 1rem;
+    gap: 0.4rem;
 }
 .heading{
-    flex: 1;
+    background-color: #111;
+    flex: 0.7;
+    display: flex;
+    flex-direction: column;
+    padding: 0.6rem;
+    border-radius: 8px;
+    gap: 1rem;
+}
+.logo{
+    flex: 1.4;
+    height:100%;
+}
+.logo > * {
+    height: 100%;
+}
+.homeSearch{
+    flex: 3;
+    display: flex; flex-direction: row;
+}
+.homeSearchLeft{
+    flex: 0.4; display: flex; flex-direction: column; justify-content: flex-end; gap: 1rem; min-width: 1rem;
+}
+.homeSearchRight{
+    flex: 9; display: flex; flex-direction:column; justify-content: flex-end; gap: 0.8rem; padding-left: 0.8rem;
 }
 .audioLibrary{
+    background-color: #111;
     flex: 4.5;
+    display: flex;
+    flex-direction: column;
+    border-radius: 8px;
+    padding: 0.5rem;
 }
-.rightContainer{
-    flex: 2.8;
+.yourLibraryHeading{
+   max-height: 3rem;
+   display: flex;
+   flex-direction: row;
+
+}
+.playlistLogo{
+    max-height: 68%;
+    margin-top: auto;
+}
+.playlistHeading{
+    margin-top: auto;
+    margin-left: 1rem;
+    font-size: 1.3rem;
+
+}
+.yourLibrary{
+    flex: 11;
+    max-height: 31rem;
+    display: grid;
+    grid-template-rows: repeat(auto-fill, minmax(4rem,4rem));
+    grid-template-columns: auto;
+    grid-auto-rows: 4rem;
+    overflow-y: scroll;
+    gap: 0.5rem;
+    padding: 0.7rem;
+    
+}
+.librarySongList{
+    border: 1px solid white;
+    border-radius: 8px;
+    display: flex;
+    flex-direction: row;
+    justify-content: center;
+    padding: 0.8rem 1.4rem ;
+    gap: 0.6rem;
+}
+.musicIconLogo{
+    flex: 0.6;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+}
+.songNameContainer{
+    flex: 4;
     display: flex;
     flex-direction: column;
 }
-.navbar{
+.songName{
+    flex: 1;
+    font-weight: 450;
+}
+.artistName{
+    flex: 1;
+    font-weight: 400;
+}
+.playNowContainer{
+    flex: 2.5;
+    display: flex;
+    flex-direction: row;
+    gap: 0.2;
+
+}
+.playnow{
+   flex: 2;
+   margin: 0.5rem 0rem 0.5rem 0rem;
+   font-size: 0.9rem;
+   display: flex;
+   flex-direction: column;
+   justify-content: center;
+}
+.playnowButton{
+    flex: 0.8;
+    margin: 0.3rem 0rem 0.3rem 0rem;
+}
+.rightContainer{
+    background-color: #111;
     flex: 3;
+    display: flex;
+    flex-direction: column;
+    margin: 1rem 0.5rem 2rem 0rem;
+    border-radius: 8px;
+}
+.navbar{
+    border-radius: 8px 8px 0px 0px ;
+    background-color: #222;
+    flex: 2.5;
+    display: flex;
+    flex-direction: row;
+
+}
+.arrowcontainer{
+    display: flex;
+    flex-direction: row;
+    justify-content: center;
+    margin-top: 1.3rem;
+}
+.navright{
+    display: flex;
+    flex-direction: row;
+    justify-content: end;
+    padding: 1rem 2rem 1rem 1rem;
+}
+.developerLinkedin{
+    background-color: white;
+    color: #111;
+    width: fit-content;
+    padding: 1rem;
+    border-radius: 40px;
 }
 .playlist{
    flex: 1;
    margin: 1rem 1rem 0rem 1rem ;
+   font-size: 1.5rem ;
+   font-weight: 600;
 }
 .playlistGrid{
    flex: 15;
-   margin: 1rem 2.5rem 0rem 1.5rem;
+   margin: 1rem 1rem 0rem 1.5rem;
    display: grid;
    gap: 0.7rem;
-   padding: 0.7rem;
-   grid-template-columns: repeat(auto-fill, minmax(12rem, 12rem));
-   grid-template-rows: repeat(auto-fill, minmax(16rem, 16rem));
+   padding: 0.7rem 0.5rem 0.7rem 0.7rem;
+   grid-template-columns: repeat(auto-fill, minmax(12.5rem, 12.5rem));
+   grid-template-rows: repeat(auto-fill, minmax(16.5rem, 16.5rem));
    grid-auto-rows: 16rem;
    overflow-y: scroll;
+}
+.card{
+    background-color: #222;
+    border-radius:5px;
+    display: flex;
+    flex-direction: column;
+    padding: 1rem 0.7rem 0.7rem 0.7rem;
+    gap: 0.2rem;
+}
+.songPosterContainer{
+    flex: 5;
+    display: flex;
+    flex-direction: column;
+    justify-content: end;
+    align-items: end;
+}
+.playButtoninCard{
+    z-index: 2;
+    height: 3.5rem;
+    width: 2.8rem;
+    display: flex;
+    flex-direction: column;
+    justify-content: end;
+}
+.songNameinCard{
+    flex: 0.6;
+    font-size: 1.4rem;
+
+}
+.artistNameinCard{
+    flex: 0.6;
+    font-weight: 430;
+}
+.invert{
+    filter: invert(1);
 }
 
 
 
+/* CSS for adding background-poster-image for each card  */
+
+.bgimage1{
+    background-image:url(./image/1.jpeg) ;
+    background-size: cover;
+}
+.bgimage2{
+    background-image:url(./image/2.jpeg) ;
+    background-size: cover;
+}
+.bgimage3{
+    background-image:url(./image/3.jpeg) ;
+    background-size: cover;
+}
+.bgimage4{
+    background-image:url(./image/4.jpeg) ;
+    background-size: cover;
+}
+.bgimage5{
+    background-image:url(./image/5.jpeg) ;
+    background-size: cover;
+}
+.bgimage6{
+    background-image:url(./image/6.jpeg) ;
+    background-size: cover;
+}
+.bgimage7{
+    background-image:url(./image/7.jpeg) ;
+    background-size: cover;
+}
+.bgimage8{
+    background-image:url(./image/8.jpeg) ;
+    background-size: cover;
+}
+.bgimage9{
+    background-image:url(./image/9.jpeg) ;
+    background-size: cover;
+}
+.bgimage10{
+    background-image:url(./image/10.jpeg) ;
+    background-size: cover;
+}
+.bgimage11{
+    background-image:url(./image/11.jpeg) ;
+    background-size: cover;
+}
+.bgimage12{
+    background-image:url(./image/12.jpeg) ;
+    background-size: cover;
+}
+.bgimage13{
+    background-image:url(./image/13.jpeg) ;
+    background-size: cover;
+}
+.bgimage14{
+    background-image:url(./image/14.jpeg) ;
+    background-size: cover;
+}
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+/* additional style changes */
+
+::-webkit-scrollbar {
+    width: 10px; /* Vertical scrollbar width */
+    /* height: 10px; Horizontal scrollbar height */
+  }
+  
+::-webkit-scrollbar-track {
+    background: #222; /* Light grey background */
+    border-radius: 5px;
+  }
+
+::-webkit-scrollbar-thumb {
+    background: #333;
+    border-radius: 5px;
+  }
 
