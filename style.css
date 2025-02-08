@@ -219,22 +219,26 @@ body{
 }
 
 .slidableBtnContainer{
-    height: 3.5rem;
+    height: 4rem;
     display: flex;
     flex-direction: column;
     border-radius: 10px;
     background-color: #222;
-    margin: 0.5rem 2rem 0rem 2rem ;
+    margin: 0.5rem 2rem 0.5rem 2rem ;
+    padding: 0.5rem;
+    gap: 0.2rem;
 }
 .slidableBtns{
     flex: 3;
     display: flex;
     flex-direction: row;
     gap: 1.5rem;
-    padding: 0.5rem 0.5rem  0.5rem 0.5rem  ;
 }
 .playedSongName{
     flex: 5;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
 }
 .previousSong{
     flex: 0.3;
@@ -247,10 +251,26 @@ body{
 }
 .timer{
     flex: 5;
+    display: flex;
+   flex-direction: column;
+   justify-content: center;
+   align-items: end;
 }
-
-.sliderBtn{
+.seekbar{
     flex: 0.5;
+    border-radius: 10px;
+    min-height: 0.4rem;
+    background-color: #222;
+}
+.seekbarThumb{
+    width: 0.7rem;
+    height: 0.7rem;
+    border-radius: 50%;
+    position: absolute;
+    margin-top: -2.5px;
+    margin-left: 0%;
+    transition: left 0.5s;
+    background-color: #222;
 }
 
 
@@ -327,7 +347,7 @@ body{
 
 
 
-/* additional style changes */
+/* additional style changes in scrollbar and slidable button */
 
 ::-webkit-scrollbar {
     width: 10px; /* Vertical scrollbar width */
