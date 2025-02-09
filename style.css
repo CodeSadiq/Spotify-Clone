@@ -178,11 +178,15 @@ body{
     padding: 1rem 2rem 1rem 1rem;
 }
 .developerLinkedin{
+    height: 2.5rem;
     background-color: white;
     color: #111;
     width: fit-content;
     padding: 1rem;
     border-radius: 40px;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
 }
 .playlist{
    flex: 1;
