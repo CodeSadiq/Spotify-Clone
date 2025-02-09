@@ -5,6 +5,7 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Spotify_Clone</title>
     <link href="style.css" rel="stylesheet">
+    <link href="responsive.css" rel="stylesheet">
 </head>
 <body>
     <header>
@@ -23,6 +24,7 @@
                      <div >Home</div>
                      <div>Search</div>
                   </div>
+                  <div class="homeSearchRightAdded"><img class="invert" src="./svg/close.svg"></div>
                </div>
             </div>
             <div class="audioLibrary">
@@ -194,10 +196,13 @@
 
          <div class="rightContainer">
             <div class="navbar">
-               <div class="navleft" style="flex: 1;">
-                  <div class="arrowcontainer"><img src="./svg/arrow1.svg" > <img src="./svg/arrow2.svg"></div>
+               <div class="navleft">
+                  <div class="arrowcontainer">
+                  <img class="arrow" src="./svg/arrow1.svg" > <img class="arrow" src="./svg/arrow2.svg">
+                  </div>
+                  <img class="hamburger invert" src="./svg/hamburger.svg" >
                </div>
-               <div class="navright" style="flex: 9;">
+               <div class="navright">
                   <div class="developerLinkedin">Developer Linkedin</div>
                </div>
             </div>
@@ -302,12 +307,14 @@
                   <div class="artistNameinCard">Taylor Swift</div>
                </div>
             </div>
-            <div class="slidableBtnContainer">
+             <div class="slidableBtnContainer">
                <div class="slidableBtns">
                   <div class="playedSongName"> <div id="401">All We Know</div></div>
-                  <div class="previousSong"><img src="./svg/prevsong.svg" style="height: 100%;" class="invert"></div>
-                  <div class="mainPlayBtn"> <img src="./svg/playsong.svg" style="height: 100%;" class="invert 301"></div>
-                  <div class="nextSong"><img src="./svg/nextsong.svg" style="height: 100%;" class="invert"></div>   
+                  <div class="threeButtons">
+                     <div class="previousSong changeSong" id="501"><img src="./svg/prevsong.svg" style="height: 100%;" class="invert"></div>
+                     <div class="mainPlayBtn" id="502"> <img src="./svg/playsong.svg" style="height: 100%;" class="invert 301"></div>
+                     <div class="nextSong changeSong" id="503"><img src="./svg/nextsong.svg" style="height: 100%;" class="invert"></div>      
+                  </div>
                   <div class="timer"> <div id="402">00:00/00:00 </div></div>    
                </div>  
                <div class="seekbar invert">

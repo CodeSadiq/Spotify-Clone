@@ -3,6 +3,7 @@ let audio;
 let audioIsPlaying = false;
 let playedAudioClass =0;
 let playedCardClass =0;
+let currentIndex =0;
 let cardBtnClass, songListBtnClass;
 for (let i=0 ; i<14; i++){
     document.querySelectorAll(".songName")[i].textContent= document.querySelectorAll(".songNameinCard")[i].textContent;
@@ -77,6 +78,8 @@ $(".card").on("click" , function() {
        audio= songArray[this.classList[0]-1]
        audioIsPlaying = true;
        playedCardClass = this.classList[0];
+       currentIndex= parseInt(this.classList[0])-1;
+       playedAudioClass = parseInt(this.classList[0])+100
        cardBtnClass= this.classList[0]
        songListBtnClass = parseInt(this.classList[0])+200 ;
        changePlayBtn();
@@ -105,6 +108,8 @@ $(".librarySongList").on("click" , function() {
         audio= songArray[this.classList[1]-100-1]
         audioIsPlaying = true;
         playedAudioClass = this.classList[1];
+        currentIndex = parseInt(this.classList[1])-100-1;
+        playedCardClass = parseInt(this.classList[1])-100;
         songListBtnClass = parseInt(this.classList[1])-100+200;
         cardBtnClass = parseInt(this.classList[1])-100;
         changePlayBtn();
@@ -125,6 +130,22 @@ $(".301").on("click", function(){
         }
     }
 });
+
+$(".changeSong").on("click", function(){
+        if(this.id === '501' && currentIndex >0){
+            $(".librarySongList").eq(currentIndex - 1).trigger("click");
+        }else if ( this.id === '503' && currentIndex< songArray.length){
+            $(".librarySongList").eq(currentIndex + 1).trigger("click");
+        }
+    
+})
+$(".hamburger").on("click", function(){
+   $(".leftContainer").addClass("leftContainerInMobile");
+})
+
+$(".homeSearchRightAdded").on("click", function(){
+    $(".leftContainer").removeClass("leftContainerInMobile");
+})
 
 // $(document).ready(function() {
 //     // Manually trigger click on the first song
