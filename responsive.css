@@ -273,7 +273,7 @@ body{
 }
 .yourLibrary{
     flex: 11;
-    max-height: 38rem;
+    max-height: 100vdh;
     display: grid;
     grid-template-rows: repeat(auto-fill, minmax(4rem,4rem));
     grid-template-columns: auto;
