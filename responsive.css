@@ -303,17 +303,21 @@ body{
     justify-content: center;
 }
 .songNameContainer{
+    box-sizing: border-box;
     flex: 4;
+    height: 2.3rem;
     display: flex;
     flex-direction: column;
 }
 .songName{
     flex: 1;
     font-weight: 420;
+    font-size: 13px;
 }
 .artistName{
     flex: 1;
     font-weight: 390;
+    font-size: 13px;
 }
 .playNowContainer{
     flex: 2.5;
@@ -325,7 +329,7 @@ body{
 .playnow{
    flex: 2;
    margin: 0.5rem 0rem 0.5rem 0rem;
-   font-size: 0.9rem;
+   font-size: 12px;
    font-weight: 420;
    display: flex;
    flex-direction: column;
