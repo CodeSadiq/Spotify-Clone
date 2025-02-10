@@ -1,4 +1,4 @@
-let songArray = [];
+const songArray = [];
 let audio;
 let audioIsPlaying = false;
 let playedAudioClass =0;
@@ -12,6 +12,10 @@ for (let i=0 ; i<14; i++){
     document.querySelectorAll(".playNowContainer .playnowButton .invert")[i].classList.add(`${i+200+1}`);
     songArray.push(new Audio (`./songs/${i+1}.mp3`));
 };
+
+songArray.forEach((audio) => {
+    audio.preload = "auto"; // Ensures audio is loaded beforehand
+});
 
 function changePlayBtn() {
     setTimeout(()=> {
@@ -147,6 +151,7 @@ $(".hamburger").on("click", function(){
 $(".homeSearchRightAdded").on("click", function(){
     $(".leftContainer").removeClass("leftContainerInMobile ");
 })
+
 
 // $(document).ready(function() {
 //     // Manually trigger click on the first song
