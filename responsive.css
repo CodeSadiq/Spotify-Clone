@@ -339,4 +339,14 @@ body{
     flex: 0.8;
     margin: 0.3rem 0rem 0.3rem 0rem;
 }
+
+@keyframes spin {
+        0% {
+            transform: rotate(0deg);
+        }
+        100% {
+            transform: rotate(360deg);
+        }
+    }
+
 }
