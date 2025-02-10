@@ -140,11 +140,12 @@ $(".changeSong").on("click", function(){
     
 })
 $(".hamburger").on("click", function(){
-   $(".leftContainer").addClass("leftContainerInMobile");
+   $(".leftContainer").addClass("leftContainerInMobile ");
+
 })
 
 $(".homeSearchRightAdded").on("click", function(){
-    $(".leftContainer").removeClass("leftContainerInMobile");
+    $(".leftContainer").removeClass("leftContainerInMobile ");
 })
 
 // $(document).ready(function() {
