@@ -338,10 +338,16 @@
   </div>
   
   <script>
-      window.onload = function () {
-          document.getElementById("loader").style.display = "none";
-      };
-  </script>
+   window.addEventListener("load", function () {
+       setTimeout(() => {
+           document.getElementById("loader").style.opacity = "0"; // Smooth transition
+           setTimeout(() => {
+               document.getElementById("loader").style.display = "none";
+           }, 500); // Wait for the fade-out animation
+       }, 500); // Optional delay for smoother experience
+   });
+</script>
+
   
     <script src="./index.js" charset="UTF-8" defer></script>
 </body>
